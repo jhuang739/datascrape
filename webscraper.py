@@ -17,7 +17,7 @@ def get_DOI(link):
 	html = create_html(link)
 	unref_DOI = html.find('li', attrs = {'id': 'artDoi'}) 
 	DOI = unref_DOI.text.strip() 
-	ref_DOI = DOI[16: 23]
+	ref_DOI = DOI[16:]
 	return ref_DOI
 
 def get_authors(link):
